@@ -1,6 +1,7 @@
 # Temp Files #
 ##############
 .tmp/
+dist/
 
 # OS Generated Files #
 ######################
