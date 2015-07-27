@@ -1,0 +1,9 @@
+# Temp Files #
+##############
+.tmp/
+
+# OS Generated Files #
+######################
+.DS_Store
+.DS_Store?
+.Trashes
