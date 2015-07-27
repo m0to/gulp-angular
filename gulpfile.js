@@ -4,7 +4,7 @@ var gulp = require('gulp');
 // Include Plugins
 var gutil = require('gulp-util');
 var coffee = require('gulp-coffee');
-var jshint = require('gulp-jshint');
+var coffeelint = require('gulp-coffeelint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -44,9 +44,9 @@ gulp.task('views', function() {
 
 // Lint Task
 gulp.task('lint', function() {
-  gulp.src(bases.tmp + 'scripts/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+  gulp.src(bases.app + '**/.coffee')
+    .pipe(coffeelint())
+    .pipe(coffeelint.reporter());
 });
 
 // Compile Our Sass
